@@ -40,6 +40,3 @@ def PtoSreads(input,output):
 
  with open("output", "w") as out_f:
    out_f.write("\n".join(res))
-
-
-PtoSreads("/content/drive/My Drive/Colab Notebooks/bam.txt","/content/drive/My Drive/Colab Notebooks/bam_r.txt")

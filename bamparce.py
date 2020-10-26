@@ -7,9 +7,9 @@ Original file is located at
     https://colab.research.google.com/drive/1nBjfLf7BzCMQE79LIa9nN4Bdcb45CdMu
 """
 
-def PtoSreads(input,output):
+def PtoSreads(inpt,outpt):
  import csv
- with open(input) as inpf:
+ with open(inpt) as inpf:
    reader = csv.reader(inpf, delimiter='\t')
    names=[]
    for elem in reader:
@@ -17,7 +17,7 @@ def PtoSreads(input,output):
        names.append(elem[0])
  res=[]
  for n in names:
-   with open(input) as inpf:
+   with open(inpt) as inpf:
       reader2 = csv.reader(inpf, delimiter='\t')
       read=[]
       nl=[]
@@ -38,5 +38,5 @@ def PtoSreads(input,output):
           read[i-1][9]=nnl
           res.append("\t".join(read[i-1]))
 
- with open("output", "w") as out_f:
+ with open("outpt", "w") as out_f:
    out_f.write("\n".join(res))
